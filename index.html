@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Capstone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="styles/homepage.css" />
+   
+</head>
+<body>
+    
+
+<div class="slideshow-container">
+
+    <div class="slideShow">
+      <div class="slides">1 / 5</div>
+      <img src="images/photo_1.JPG" style="  width:80%;
+      ">
+      <div class="text">Rex</div>
+    </div>
+  
+    <div class="slideShow">
+      <div class="slides">2 / 5</div>
+      <img src="images/photo_2.jpg" style="  width:80%;">
+      <div class="text">Ballast and Berloux</div>
+    </div>
+  
+    <div class="slideShow">
+      <div class="slides">3 / 5</div>
+      <img src="images/photo_3.jpg" style="width:100%;">
+      <div class="text">Frenchies at the beach</div>
+    </div>
+
+    <div class="slideShow">
+        <div class="slides">4 / 5</div>
+        <img src="images/photo_4.jpg" style="width:80%;">
+        <div class="text">Yours Truly</div>
+      </div>
+
+      <div class="slideShow">
+        <div class="slides">5 / 5</div>
+        <img src="images/photo_5.jpg" style="width:100%">
+        <div class="text">The Wife and I</div>
+      </div>
+  
+    
+  </div>
+  <br>
+  
+  
+  
+
+  <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+
+
+  <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slideShow");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000);
+      }
+      </script>
+
+    
+    </body>
+    </html>
